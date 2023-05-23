@@ -1,0 +1,26 @@
+name: Validate Pull Requests
+
+on:
+  pull_request:
+
+jobs:
+  tests:
+    uses: ./.github/workflows/tests.yml
+
+  validate-action:
+    runs-on: ubuntu-latest
+    name: Validate pull-request
+    needs: tests
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Pull request linter action
+        uses: JulienKode/pull-request-name-linter-action@v0.5.0
+
+      - name: Validate commits
+        run: npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
