@@ -4,7 +4,7 @@
   "description": "Solution Template Repository",
   "main": "dist/main.js",
   "scripts": {
-    "build": "echo \"TODO: Building...\"",
+    "build": "npx tsc",
     "prepare": "husky install"
   },
   "repository": {
@@ -19,7 +19,8 @@
   "homepage": "https://github.com/thcare/solution-template#readme",
   "devDependencies": {
     "husky": "^8.0.3",
-    "pretty-quick": "^3.1.3"
+    "pretty-quick": "^3.1.3",
+    "typescript": "^5.0.4"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com",
