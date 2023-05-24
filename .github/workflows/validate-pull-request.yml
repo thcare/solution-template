@@ -11,6 +11,8 @@ jobs:
           fetch-depth: 0
 
       - name: Install dependencies
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm ci
 
       - name: Build Solution
