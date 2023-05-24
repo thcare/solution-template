@@ -7,7 +7,7 @@
   "types": "dist/main.d.ts",
   "scripts": {
     "prebuild": "npm run clean",
-    "build": "thfx-prisma && graphql-codegen && tsc && node dist/scripts/compile.js",
+    "build": "src/scripts/build.sh",
     "prepare": "husky install",
     "clean": "rm -rf dist"
   },
