@@ -1,0 +1,33 @@
+BEGIN TRY
+
+BEGIN TRAN;
+
+-- CreateTable
+CREATE TABLE [dbo].[Draft] (
+    [id] NVARCHAR(1000) NOT NULL,
+    [form_id] NVARCHAR(1000) NOT NULL,
+    [data] NVARCHAR(1000) NOT NULL,
+    CONSTRAINT [Draft_pkey] PRIMARY KEY CLUSTERED ([id]),
+    CONSTRAINT [Draft_form_id_key] UNIQUE NONCLUSTERED ([form_id])
+);
+
+-- CreateTable
+CREATE TABLE [dbo].[Submission] (
+    [id] NVARCHAR(1000) NOT NULL,
+    [form_id] NVARCHAR(1000) NOT NULL,
+    [data] NVARCHAR(1000) NOT NULL,
+    CONSTRAINT [Submission_pkey] PRIMARY KEY CLUSTERED ([id])
+);
+
+COMMIT TRAN;
+
+END TRY
+BEGIN CATCH
+
+IF @@TRANCOUNT > 0
+BEGIN
+    ROLLBACK TRAN;
+END;
+THROW
+
+END CATCH

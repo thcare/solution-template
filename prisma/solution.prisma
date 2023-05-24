@@ -1,0 +1,20 @@
+model Patient {
+  id String @id @default(uuid())
+  name        String
+  email       String
+  feedItems FeedItem[]
+}
+
+// Feed items are the parent for notifications, tasks, and events.
+model FeedItem {
+  id String @id @default(uuid())
+
+  subject String
+  body String?
+
+  createdAt DateTime @default(now())
+  dismissedAt DateTime?
+
+  patient Patient @relation(fields: [patientId], references: [id])
+  patientId String
+}
