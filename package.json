@@ -9,8 +9,20 @@
     "prebuild": "npm run clean",
     "build": "src/scripts/build.sh",
     "prepare": "husky install",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "watch": "tsc --build --watch --preserveWatchOutput",
+    "start": "func start --javascript",
+    "dev": "run-p start watch"
   },
+  "files": [
+    "dist",
+    "prisma",
+    "Fn*/**",
+    "host.json",
+    "local.settings.json",
+    ".funcignore",
+    "npm-shrinkwrap.json"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/thcare/solution-template.git"
@@ -22,11 +34,13 @@
   },
   "homepage": "https://github.com/thcare/solution-template#readme",
   "devDependencies": {
+    "@azure/functions": "^3.5.1",
     "@graphql-codegen/cli": "^4.0.0",
     "@graphql-codegen/client-preset": "^4.0.0",
     "@thcare/thcarefx": "^6.8.2",
     "@types/node": "^20.2.3",
     "husky": "^8.0.3",
+    "npm-run-all": "^4.1.5",
     "pretty-quick": "^3.1.3",
     "typegraphql-prisma": "^0.25.1",
     "typescript": "^5.0.4"

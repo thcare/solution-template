@@ -1,18 +1,18 @@
 import { FormComponent, FormComponentType, FormStep } from "@thcare/thcarefx";
 
-export const firstNameInput: FormComponent = {
-  name: "first_name",
-  label: "First Name",
+const nameInput: FormComponent = {
+  name: "name",
+  label: "Patient Name",
   type: FormComponentType.Text,
   defaultValue: "",
   validate: {
     string: {
-      required: ["First Name is required"],
+      required: ["Patient Name is required"],
     },
   },
 };
 
-export const emailInput: FormComponent = {
+const emailInput: FormComponent = {
   name: "email",
   label: "Email",
   type: FormComponentType.Email,
@@ -24,7 +24,7 @@ export const emailInput: FormComponent = {
   },
 };
 
-export const submitComponent: FormComponent = {
+const submitComponent: FormComponent = {
   type: FormComponentType.Submit,
   label: "Submit",
   name: "submit",
@@ -34,7 +34,7 @@ export const submitComponent: FormComponent = {
 const step: FormStep = {
   type: "step",
   name: "1",
-  components: [firstNameInput, emailInput, submitComponent],
+  components: [nameInput, emailInput, submitComponent],
 };
 
 export default step;
