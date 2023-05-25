@@ -29,8 +29,7 @@ jobs:
           client-name: ${{ vars.CLIENT_NAME }}
           build-environment: development
           deploy-environment: development
-          dependency-token: ${{ secrets.THCARE_NODE_AUTH_TOKEN }}
-          clone-token: ${{ secrets.GITHUB_TOKEN }}
+          dependency-token: ${{ secrets.THCARE_NODE_AUTH_TOKEN_V2 }}
           solution-package: ${{ steps.package.outputs.filename }}
           azure-subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
           azure-tenant-id: ${{ vars.AZURE_TENANT_ID }}
