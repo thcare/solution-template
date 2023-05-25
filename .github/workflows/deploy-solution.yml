@@ -1,0 +1,37 @@
+name: Deploy Solution
+run-name: ${{ github.actor }} triggered a deploy
+on: workflow_dispatch
+concurrency: deploy-solution
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+
+      - name: Install dependencies
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm ci --ignore-scripts
+
+      - name: Build
+        run: npm run build
+
+      - name: Package
+        id: package
+        run: echo "filename=$(npm pack --json | jq -c '.[0].filename')" >> $GITHUB_OUTPUT
+
+      - name: Build/Provision/Deploy
+        uses: thcare/deploy.th.care/.github/actions/build-provision-deploy-solution@main
+        with:
+          client-name: ${{ vars.CLIENT_NAME }}
+          build-environment: development
+          deploy-environment: development
+          dependency-token: ${{ secrets.THCARE_NODE_AUTH_TOKEN }}
+          solution-package: ${{ steps.package.outputs.filename }}
+          azure-subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+          azure-tenant-id: ${{ vars.AZURE_TENANT_ID }}
+          azure-client-id: ${{ vars.AZURE_CLIENT_ID }}
+          azure-client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
