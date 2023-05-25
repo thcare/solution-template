@@ -7,6 +7,7 @@
   "types": "dist/main.d.ts",
   "scripts": {
     "codespace:init": "./src/scripts/codespace-init.sh",
+    "codespace:test": "./src/scripts/codespace-test.sh",
     "prebuild": "npm run clean",
     "build": "src/scripts/build.sh",
     "prepare": "husky install",
