@@ -3,6 +3,15 @@ model Patient {
   name        String
   email       String
   feedItems FeedItem[]
+  aicReadings AicReading[]
+}
+
+model AicReading {
+  id String @id @default(uuid())
+  patient Patient @relation(fields: [patientId], references: [id])
+  patientId String
+  value Float
+  createdAt DateTime @default(now())
 }
 
 // Feed items are the parent for notifications, tasks, and events.
