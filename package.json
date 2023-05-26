@@ -14,7 +14,8 @@
     "clean": "rm -rf dist",
     "watch": "tsc --build --watch --preserveWatchOutput",
     "start": "func start --javascript",
-    "dev": "run-p start watch"
+    "dev": "run-p start watch dev:apps",
+    "dev:apps": "src/scripts/build.sh && thfx solution:dev"
   },
   "files": [
     "dist",
@@ -39,7 +40,7 @@
     "@azure/functions": "^3.5.1",
     "@graphql-codegen/cli": "^4.0.0",
     "@graphql-codegen/client-preset": "^4.0.0",
-    "@thcare/thcarefx": "^6.8.2",
+    "@thcare/thcarefx": "^7.0.0",
     "@types/node": "^20.2.3",
     "husky": "^8.0.3",
     "npm-run-all": "^4.1.5",
