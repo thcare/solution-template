@@ -9,8 +9,6 @@
     "ghcr.io/devcontainers/features/dotnet:1": {},
     "ghcr.io/devcontainers/features/docker-in-docker:2": {}
   },
-  "postCreateCommand": "bash ./scripts/post-create.sh",
-  "postStartCommand": "bash ./scripts/post-start.sh",
   "hostRequirements": {
     "cpus": 4,
     "memory": "8gb",
@@ -25,10 +23,7 @@
       ]
     },
     "codespaces": {
-      "openFiles": [
-        "README.md",
-        "src/main.ts"
-      ],
+      "openFiles": ["README.md", "src/main.ts"],
       "repositories": {
         "thcare/web.th.care": {
           "permissions": {
