@@ -14,11 +14,12 @@ your own name, or whatever you'd like.
 
 ### Start a codespace
 
-The fastest way to get started is to spin up a codespace by clicking this button.
+The fastest way to get started is to spin up a codespace by clicking on the top
+right "Code" button, then "Create codespace" Click that, and you'll get a new
+browser tab that sets up a codespace and will be running VS Code with this
+readme open.
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/thcare/solution-template)
-
-Click that, and you'll get a new browser tab running VS Code with this readme open. See you on the other side!
+See you on the other side!
 
 ### Initialise your development environment
 
