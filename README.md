@@ -1,6 +1,6 @@
 # Solution Template
 
-Welcome to YOUR th.care framework powered Solution!
+Welcome to YOUR th.care Framework powered Solution!
 
 ## Quickstart
 
@@ -8,28 +8,24 @@ Welcome to YOUR th.care framework powered Solution!
 
 Click the button "Use this template" then click "Create a new repository"
 
-For the demo, we ask that everyone put the repo in the thcare org (it won't
-work otherwise), and name their repo `solution-<name>`, replace `<name>` with
-your own name, or whatever you'd like.
+For the demo, we ask that everyone put the repo in the thcare org (it won't work otherwise), and name their repo `solution-<name>`, replace `<name>` with your name, or whatever you'd like. Please make sure the repo is _private_.
 
 ### Start a codespace
 
-The fastest way to get started is to spin up a codespace by clicking this button.
+The fastest way to get started is to spin up a codespace! Click the "Code" button in the top right of your repo, and select "Open with Codespaces". This will take a few minutes to spin up.
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/thcare/solution-template)
+You'll get a new browser tab running VS Code with this readme open. See you on the other side!
 
-Click that, and you'll get a new browser tab running VS Code with this readme open. See you on the other side!
-
-### Initialise your development environment
+### Initialize your development environment
 
 In the VS Code [terminal](https://code.visualstudio.com/docs/terminal/basics)
 you can now run the following command:
 
-```
+```bash
 npm run codespace:init
 ```
 
-This will download the dependencies and prepare you to begin development of your solution.
+This will download the dependencies and prepare you to begin the development of your solution.
 
 ### A tour of the (important) files in this solution
 
@@ -63,8 +59,8 @@ to a title of your choosing.
 
 You can develop your solution by running the following command:
 
-```
-npx thfx solution:dev
+```bash
+thfx solution:dev
 ```
 
 You should then be able to open a browser window at `http://localhost:3000` (if
@@ -72,7 +68,7 @@ you're on local) or `TODO` if you're running in a codespace.
 
 ### Commit and push your changes
 
-If you're unfamiliar with `git`, don't wory, this should be pretty simple using VS Code.
+If you're unfamiliar with `git`, don't worry, this should be pretty simple using VS Code.
 You'll need to 1. Add (stage) your changes, 2. Commit your changes, then 3. Commit & push (sync)
 
 The VS Code docs offer a simple and great explanation
@@ -88,13 +84,17 @@ TL;DR
 
 ### Ready to deploy!
 
-You will need to get some credentials, and set them in your github
+You will need to get some credentials and set them in your GitHub
 repository, then you will be able to use the Deploy solution action to
 see your solution live.
 
+```bash
+thfx init <name>
 ```
-npx thfx solution:init --configure-github
-```
+
+Replace `<name>` with the same name you used in your repository naming earlier (i.e. `solution-<name>`).
+
+NOTE: This relies on some variables that are set in codespaces, so if you're not using a codespace, you'll need to set these manually. See the [thfx init command documentation](https://github.com/thcare/dev.th.care/blob/main/docs/cli/init.md) for details.
 
 Once this runs successfully, you should be able to go to your repo:
 `https://github.com/thcare/<FILL_IN_YOUR_SOLUTION_REPO>/actions/workflows/deploy-solution.yml`
@@ -103,5 +103,5 @@ deployment by watching the logs, or simply wait for the run to succeed
 (or fail! These are early days for the framework, and your patience is
 valued)
 
-Once the deploy is complete, you should be able to visit your solution, live at:
+Once the deployment is complete, you should be able to visit your solution, live at:
 `https://patient.<YOUR_SOLUTION_NAME>.dev.thdev.care/`
