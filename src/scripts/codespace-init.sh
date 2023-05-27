@@ -12,3 +12,4 @@ npm install
 cd ../api.th.care
 npm install
 
+npm install -g @thcare/thcarefx
