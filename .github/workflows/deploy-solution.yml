@@ -13,7 +13,7 @@ jobs:
 
       - name: Install dependencies
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.THCARE_NODE_AUTH_TOKEN }}
         run: npm ci --ignore-scripts
 
       - name: Build
