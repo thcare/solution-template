@@ -123,4 +123,4 @@ Once the deployment is complete, you should be able to visit your solution, live
 
 ## Further Reading
 
-See our [Documentation Wiki](https://github.com/thcare/docs/wiki) for more information on how to use the th.care Framework. Start with
+See our [Documentation Wiki](https://github.com/thcare/docs/wiki) for more information on how to use the th.care Framework.
