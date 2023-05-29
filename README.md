@@ -8,7 +8,17 @@ Welcome to YOUR th.care Framework powered Solution!
 
 Click the button "Use this template" then click "Create a new repository"
 
-For the demo, we ask that everyone put the repo in the thcare org (it won't work otherwise), and name their repo `solution-<name>`, replace `<name>` with your name, or whatever you'd like. Please make sure the repo is _private_.
+---
+
+**IMPORTANT NOTE**
+
+For the demo, we ask that:
+
+1. Everyone put the repo in the `thcare` org (it won't work otherwise)
+2. Prefix the name in their repo like this `solution-<name>`. Replace `<name>` with your name, or whatever you'd like.
+3. Ensure sure the repo is _private_.
+
+---
 
 ### Start a codespace
 
