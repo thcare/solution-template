@@ -105,3 +105,6 @@ dist
 
 # Generated for graphql client.
 schema.gql
+
+# Wireit cache
+.wireit/

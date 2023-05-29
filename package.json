@@ -6,15 +6,82 @@
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
   "scripts": {
-    "codespace:init": "./src/scripts/codespace-init.sh",
-    "codespace:test": "./src/scripts/codespace-test.sh",
-    "prebuild": "npm run clean",
-    "build": "src/scripts/build.sh",
-    "prepare": "husky install",
-    "clean": "rm -rf dist",
-    "watch": "tsc --build --watch --preserveWatchOutput",
-    "start": "func start --javascript",
-    "dev": "run-p start watch"
+    "build": "wireit",
+    "start": "wireit",
+    "dev": "wireit"
+  },
+  "wireit": {
+    "build": {
+      "dependencies": [
+        "build/prisma",
+        "build/graphql",
+        "build/tsc",
+        "build/compile"
+      ]
+    },
+    "build/prisma": {
+      "command": "thfx prisma",
+      "files": [
+        "prisma/solution.prisma"
+      ],
+      "output": [
+        "prisma/schema.prisma",
+        "schema.gql"
+      ]
+    },
+    "build/graphql": {
+      "command": "graphql-codegen",
+      "files": [
+        "codegen.yml",
+        "schema.gql"
+      ],
+      "dependencies": [
+        "build/prisma"
+      ]
+    },
+    "build/tsc": {
+      "command": "tsc --build",
+      "clean": "if-file-deleted",
+      "files": [
+        "src/**/*.{ts,tsx}",
+        "tsconfig.json"
+      ],
+      "output": [
+        "dist/**",
+        ".tsbuildinfo"
+      ],
+      "dependencies": [
+        "build/prisma",
+        "build/graphql"
+      ]
+    },
+    "build/compile": {
+      "command": "node dist/scripts/compile.js",
+      "dependencies": [
+        "build/tsc"
+      ]
+    },
+    "start": {
+      "command": "func start",
+      "service": true,
+      "files": [
+        "local.settings.json"
+      ],
+      "dependencies": [
+        {
+          "script": "build",
+          "cascade": false
+        }
+      ]
+    },
+    "dev": {
+      "command": "thfx solution:dev",
+      "service": true,
+      "dependencies": [
+        "build",
+        "start"
+      ]
+    }
   },
   "files": [
     "dist",
@@ -39,13 +106,14 @@
     "@azure/functions": "^3.5.1",
     "@graphql-codegen/cli": "^4.0.0",
     "@graphql-codegen/client-preset": "^4.0.0",
-    "@thcare/thcarefx": "^6.8.2",
+    "@thcare/thcarefx": "^7.3.1",
     "@types/node": "^20.2.3",
     "husky": "^8.0.3",
     "npm-run-all": "^4.1.5",
     "pretty-quick": "^3.1.3",
     "typegraphql-prisma": "^0.25.1",
-    "typescript": "^5.0.4"
+    "typescript": "^5.0.4",
+    "wireit": "^0.9.5"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com",
