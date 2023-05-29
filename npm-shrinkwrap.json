@@ -15,7 +15,7 @@
         "@azure/functions": "^3.5.1",
         "@graphql-codegen/cli": "^4.0.0",
         "@graphql-codegen/client-preset": "^4.0.0",
-        "@thcare/thcarefx": "^7.3.1",
+        "@thcare/thcarefx": "^7.3.2",
         "@types/node": "^20.2.3",
         "azure-functions-core-tools": "^4.0.5198",
         "husky": "^8.0.3",
@@ -2807,9 +2807,9 @@
       "dev": true
     },
     "node_modules/@thcare/thcarefx": {
-      "version": "7.3.1",
-      "resolved": "https://npm.pkg.github.com/download/@thcare/thcarefx/7.3.1/9bc2f66e3cd202b252eadb34ad26c72d9f38e594",
-      "integrity": "sha512-CpMnJta51yZ2p8/TSRmibfh+4utd0AR+wNWkBVsC8cnFsdj22p2w4xrbD2HoNOSIYBBlxgZ0BNlZDe1EIXAUAA==",
+      "version": "7.3.2",
+      "resolved": "https://npm.pkg.github.com/download/@thcare/thcarefx/7.3.2/0b4d4ebcbfe41a8a6421510a9158696feb13273c",
+      "integrity": "sha512-p08ycWlEkZtoqIw/j+y81U0PMsyNlRNJigFc6s9LPlAJZMrjaw9N7dl7Vq+ox5sZdfBd008jTx9bpz2s9LJOmA==",
       "dev": true,
       "license": "UNLICENSED",
       "dependencies": {
