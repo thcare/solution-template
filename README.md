@@ -26,16 +26,13 @@ The fastest way to get started is to spin up a codespace! Click the "Code" butto
 
 You'll get a new browser tab running VS Code with this readme open. See you on the other side!
 
-### Initialize your development environment
+### Install dependencies
 
-In the VS Code [terminal](https://code.visualstudio.com/docs/terminal/basics)
-you can now run the following command:
+Once your codespace is up and running, you'll need to install the dependencies. Open a terminal in VS Code (Terminal > New Terminal) and run:
 
 ```bash
-npm run codespace:init
+npm install
 ```
-
-This will download the dependencies and prepare you to begin the development of your solution.
 
 ### A tour of the (important) files in this solution
 
@@ -57,10 +54,10 @@ This will download the dependencies and prepare you to begin the development of 
 
 ### Make a change to your solution
 
-in `src/main.ts' change this:
+In `src/apps/patient.ts' change this:
 
 ```
-  title: "Solution Template",
+  title: "Patient Application",
 ```
 
 to a title of your choosing.
@@ -70,16 +67,24 @@ to a title of your choosing.
 You can develop your solution by running the following command:
 
 ```bash
-thfx solution:dev
+npm run dev
 ```
 
-You should then be able to open a browser window at `http://localhost:3000` (if
-you're on local) or `TODO` if you're running in a codespace.
+This command takes some time as it is spinning up a local database, multiple function apps, and a web app. It may be difficult to know when it is ready because it does its best to do all these things in parallel, and skips repetitive tasks. The result should be that the Ports tab in VS Code should show ports 3000, 7071, 7072 and 21212, at minimum.
+
+In a codespace, once everything is up and running, go to the "Ports" tab at the bottom of VS Code, and click the "Open in Browser" button to the right of the line that says Port 3000.
+
+This will open a new browser tab with your solution running. You should see the title you just changed in the top left.
+
+> If you're developing locally, you should then be able to open a browser window at `http://localhost:3000`
 
 ### Commit and push your changes
 
 If you're unfamiliar with `git`, don't worry, this should be pretty simple using VS Code.
+
 You'll need to 1. Add (stage) your changes, 2. Commit your changes, then 3. Commit & push (sync)
+
+> **IMPORTANT NOTE:** Codespaces are ephemeral. If you don't commit _and_ push your changes, they will be lost when your codespace is deleted.
 
 The VS Code docs offer a simple and great explanation
 [here](https://code.visualstudio.com/docs/sourcecontrol/intro-to-git#_staging-and-committing-code-changes)
@@ -104,7 +109,7 @@ thfx init <name>
 
 Replace `<name>` with the same name you used in your repository naming earlier (i.e. `solution-<name>`).
 
-NOTE: This relies on some variables that are set in codespaces, so if you're not using a codespace, you'll need to set these manually. See the [thfx init command documentation](https://github.com/thcare/dev.th.care/blob/main/docs/cli/init.md) for details.
+> **NOTE:** This relies on some variables that are set in codespaces, so if you're not using a codespace, you'll need to set these manually. See the [thfx init command documentation](https://github.com/thcare/dev.th.care/blob/main/docs/cli/init.md) and [Documentation Wiki](https://github.com/thcare/docs/wiki) for details.
 
 Once this runs successfully, you should be able to go to your repo:
 `https://github.com/thcare/<FILL_IN_YOUR_SOLUTION_REPO>/actions/workflows/deploy-solution.yml`
@@ -115,3 +120,7 @@ valued)
 
 Once the deployment is complete, you should be able to visit your solution, live at:
 `https://patient.<YOUR_SOLUTION_NAME>.dev.thdev.care/`
+
+## Further Reading
+
+See our [Documentation Wiki](https://github.com/thcare/docs/wiki) for more information on how to use the th.care Framework. Start with
