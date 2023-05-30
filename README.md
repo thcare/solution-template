@@ -54,7 +54,7 @@ npm install
 
 ### Make a change to your solution
 
-In `src/apps/patient.ts' change this:
+In [src/apps/patient.ts](./src/apps/patient.ts) change this:
 
 ```
   title: "Patient Application",
@@ -72,11 +72,17 @@ npm run dev
 
 This command takes some time as it is spinning up a local database, multiple function apps, and a web app. It may be difficult to know when it is ready because it does its best to do all these things in parallel, and skips repetitive tasks. The result should be that the Ports tab in VS Code should show ports 3000, 7071, 7072 and 21212, at minimum.
 
-In a codespace, once everything is up and running, go to the "Ports" tab at the bottom of VS Code, and click the "Open in Browser" button to the right of the line that says Port 3000.
+Then run:
+
+```bash
+npm run open-browser
+```
 
 This will open a new browser tab with your solution running. You should see the title you just changed in the top left.
 
-> If you're developing locally, you should then be able to open a browser window at `http://localhost:3000`
+If the browser tab doesn't open, you can open it manually by going to the "Ports" tab at the bottom of VS Code and clicking the "Open in Browser" button to the right of the line that says Port 3000.
+
+> NOTE: If you're developing locally, you should then be able to open a browser window at `http://localhost:3000`
 
 ### Commit and push your changes
 
