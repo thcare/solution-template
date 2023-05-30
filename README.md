@@ -110,7 +110,7 @@ repository, then you will be able to use the Deploy solution action to
 see your solution live.
 
 ```bash
-thfx init <name>
+npx thfx init <name>
 ```
 
 Replace `<name>` with the same name you used in your repository naming earlier (i.e. `solution-<name>`).
