@@ -1,4 +1,6 @@
-# Solution Template
+# th.care Framework Solution Template
+
+![th.care logo](thcare-logo.png)
 
 Welcome to YOUR th.care Framework powered Solution!
 
@@ -67,10 +69,10 @@ to a title of your choosing.
 You can develop your solution by running the following command:
 
 ```bash
-npm run dev
+npm run workbench
 ```
 
-This command takes some time as it is spinning up a local database, multiple function apps, and a web app. It may be difficult to know when it is ready because it does its best to do all these things in parallel, and skips repetitive tasks. The result should be that the Ports tab in VS Code should show ports 3000, 7071, 7072 and 21212, at minimum.
+This command takes some time as it is spinning up a local database, multiple function apps, and web apps. It may be difficult to know when it is ready because it does its best to do all these things in parallel, and skips repetitive tasks. The result should be that the Ports tab in VS Code should show ports 3000 (3000+ for multiple web apps), 7071, 7072 and 21212, at minimum.
 
 Then run:
 
