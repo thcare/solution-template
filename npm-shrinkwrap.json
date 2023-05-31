@@ -15,7 +15,7 @@
         "@azure/functions": "^3.5.1",
         "@graphql-codegen/cli": "^4.0.0",
         "@graphql-codegen/client-preset": "^4.0.0",
-        "@thcare/thcarefx": "^7.3.2",
+        "@thcare/thcarefx": "^7.5.0",
         "@types/node": "^20.2.3",
         "@types/react": "18.0.33",
         "azure-functions-core-tools": "^4.0.5198",
@@ -2830,9 +2830,9 @@
       "dev": true
     },
     "node_modules/@thcare/thcarefx": {
-      "version": "7.3.2",
-      "resolved": "https://npm.pkg.github.com/download/@thcare/thcarefx/7.3.2/0b4d4ebcbfe41a8a6421510a9158696feb13273c",
-      "integrity": "sha512-p08ycWlEkZtoqIw/j+y81U0PMsyNlRNJigFc6s9LPlAJZMrjaw9N7dl7Vq+ox5sZdfBd008jTx9bpz2s9LJOmA==",
+      "version": "7.5.0",
+      "resolved": "https://npm.pkg.github.com/download/@thcare/thcarefx/7.5.0/0757e8d1341926eaa0f6d9889b8dd28735a04bc6",
+      "integrity": "sha512-jzzKLpWqqF8N51Ehv9r3xdIXOGafjkrcomtcrGjXL3CZ6DnkUmjr259Ky4FMzVkf2sGflfsVQRYYElj5XlgeTg==",
       "dev": true,
       "license": "UNLICENSED",
       "dependencies": {
@@ -3448,7 +3448,11 @@
       "dev": true,
       "hasInstallScript": true,
       "hasShrinkwrap": true,
-      "os": ["win32", "darwin", "linux"],
+      "os": [
+        "win32",
+        "darwin",
+        "linux"
+      ],
       "dependencies": {
         "chalk": "3.0.0",
         "extract-zip": "^2.0.1",
@@ -5363,7 +5367,9 @@
       "dev": true,
       "hasInstallScript": true,
       "optional": true,
-      "os": ["darwin"],
+      "os": [
+        "darwin"
+      ],
       "engines": {
         "node": "^8.16.0 || ^10.6.0 || >=11.0.0"
       }
