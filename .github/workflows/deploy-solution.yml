@@ -14,14 +14,14 @@ jobs:
       - name: Install dependencies
         env:
           GITHUB_TOKEN: ${{ secrets.THCARE_NODE_AUTH_TOKEN }}
-        run: npm ci --ignore-scripts
+        run: yarn install --mode=skip-build
 
       - name: Build
-        run: npm run build
+        run: yarn build
 
       - name: Package
         id: package
-        run: echo "filename=$(npm pack --json | jq -c '.[0].filename')" >> $GITHUB_OUTPUT
+        run: echo "filename=$(yarn pack --json | jq -c '.[0].filename')" >> $GITHUB_OUTPUT
 
       - name: Build/Provision/Deploy
         uses: thcare/deploy.th.care/.github/actions/build-provision-deploy-solution@main
