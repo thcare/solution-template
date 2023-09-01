@@ -1,4 +1,4 @@
-import { HookRegistration } from "@thcare/thcarefx";
+import { HookRegistration } from "@thcare/thfx";
 
 export default {
   event: { type: "FormSubmitted" },

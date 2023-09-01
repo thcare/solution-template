@@ -7,6 +7,7 @@ import {
 import request from "graphql-request";
 import { CREATE_PATIENT } from "../graphql/queries.js";
 import intakeForm from "../forms/intake.js";
+import { EventBody } from "@thcare/thfx";
 
 const onIntakeFormSubmitted: AzureFunction = async function (
   context: Context,
@@ -35,15 +36,19 @@ function getGraphQlEndpoint(): string {
   }
   return graphqlEndpoint;
 }
-function getPatientInfo(event: any): { name: string; email: string } {
+function getPatientInfo(event: EventBody<"FormSubmitted">): {
+  name: string;
+  email: string;
+} {
   if (event.submission.form_id !== intakeForm.name) {
     throw new Error(
       `Invalid form submitted, expecting "${intakeForm.name}", got "${event.submission.form_id}"`
     );
   }
+  const data = event.submission.data as { name: string; email: string };
   return {
-    name: event.submission.data.name,
-    email: event.submission.data.email,
+    name: data.name,
+    email: data.email,
   };
 }
 async function createPatientAndFeedItems(

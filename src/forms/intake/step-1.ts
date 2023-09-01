@@ -1,4 +1,4 @@
-import { FormComponent, FormComponentType, FormStep } from "@thcare/thcarefx";
+import { FormComponent, FormComponentType, FormStep } from "@thcare/thfx";
 
 const nameInput: FormComponent = {
   name: "name",
