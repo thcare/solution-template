@@ -3,14 +3,6 @@ BEGIN TRY
 BEGIN TRAN;
 
 -- CreateTable
-CREATE TABLE [dbo].[Patient] (
-    [id] NVARCHAR(1000) NOT NULL,
-    [name] NVARCHAR(1000) NOT NULL,
-    [email] NVARCHAR(1000) NOT NULL,
-    CONSTRAINT [Patient_pkey] PRIMARY KEY CLUSTERED ([id])
-);
-
--- CreateTable
 CREATE TABLE [dbo].[FeedItem] (
     [id] NVARCHAR(1000) NOT NULL,
     [subject] NVARCHAR(1000) NOT NULL,

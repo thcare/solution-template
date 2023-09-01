@@ -1,0 +1,5 @@
+{
+  "#": "this is an unfortuate hack, and should be replaced by `exports` in the parent package.json",
+  "main": "../dist/src/components/index.js",
+  "types": "../dist/src/components/index.d.ts"
+}
