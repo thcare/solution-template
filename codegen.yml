@@ -2,6 +2,6 @@ schema: schema.gql
 documents:
   - src/**/*.{ts,tsx}
 generates:
-  src/graphql/generated/:
+  src/generated/graphql/:
     preset: client
 emitLegacyCommonJSImports: false
