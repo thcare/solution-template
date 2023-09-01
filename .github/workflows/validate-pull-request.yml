@@ -7,13 +7,14 @@ jobs:
     name: Validate Solution
     steps:
       - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
 
       - name: Install dependencies
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npm ci
+        run: yarn install --mode=skip-build
 
-      - name: Build Solution
-        run: npm run build
+      - name: Build
+        run: yarn build
+
+      - name: Lint
+        run: yarn lint -- --max-warnings=0
