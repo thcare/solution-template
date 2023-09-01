@@ -22,7 +22,9 @@
     "lint": "wireit",
     "start": "wireit",
     "dev": "wireit",
-    "bundle": "wireit"
+    "bundle": "wireit",
+    "workbench": "yarn run dev --watch",
+    "open-browser": "[ \"${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}\" ] && ( sensible-browser \"https://${CODESPACE_NAME}-3000.${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}/\" ) || ( sensible-browser http://localhost:3000 )"
   },
   "wireit": {
     "build": {
@@ -119,7 +121,7 @@
       ]
     },
     "bundle": {
-      "command": "thfx solution:bundle --targetDir . --lockFile ../../yarn.lock",
+      "command": "thfx solution:bundle --targetDir .",
       "dependencies": [
         "build"
       ]
