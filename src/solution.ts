@@ -1,29 +1,13 @@
-import { App, Solution, Locale } from "@thcare/thfx";
-import { graphql } from "./generated/graphql/index.js";
-
-// TC-184: The codegen process needs to find at least one graphql query
-// in `src`, in order to build the solution. When populating
-// your solution, replace this with a meaningful query.
-void graphql(`
-  query Patients {
-    patients {
-      id
-    }
-  }
-`);
-
-const templateApp: App = {
-  title: "Template App",
-  logo: "logo.png",
-  template: "web.th.care",
-};
+import { Locale, Solution } from "@thcare/thfx";
+import patient from "./apps/patient.js";
+import onIntakeFormSubmittedHook from "./hooks/onIntakeFormSubmittedHook.js";
 
 const solution: Solution = {
   title: "th.care Solution Template",
   apps: {
-    template: templateApp,
+    patient,
   },
-
+  hooks: [onIntakeFormSubmittedHook],
   locales: ["en-CA"],
   defaultLocale: "en-CA",
   getMessagesForLocale(_locale: Locale): undefined {

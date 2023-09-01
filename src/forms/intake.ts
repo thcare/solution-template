@@ -1,4 +1,4 @@
-import { Form, ThriveResourceType } from "@thcare/thcarefx";
+import { Form, ThriveResourceType } from "@thcare/thfx";
 import stepOne from "./intake/step-1.js";
 
 const intakeForm: Form = {

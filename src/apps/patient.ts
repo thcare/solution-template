@@ -1,4 +1,4 @@
-import { App } from "@thcare/thcarefx";
+import { App } from "@thcare/thfx";
 import intakeForm from "../forms/intake.js";
 
 const app: App = {
