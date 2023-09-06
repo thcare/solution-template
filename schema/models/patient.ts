@@ -1,6 +1,6 @@
 import { models } from "@thcare/thfx/prisma";
 import FeedItem from "./feed-item.js";
-import { createModel } from "schemix";
+import { createModel } from "@thcare/thschemix";
 
 export default createModel("Patient", (model) =>
   model

@@ -1,4 +1,4 @@
-import { createModel } from "schemix";
+import { createModel } from "@thcare/thschemix";
 import Patient from "./patient.js";
 
 export default createModel("FeedItem", (model) =>

@@ -168,12 +168,12 @@
   },
   "dependencies": {
     "@azure/functions": "^3.5.1",
-    "@thcare/thfx": "^23.6.0",
+    "@thcare/thfx": "^24.3.1",
+    "@thcare/thschemix": "^24.3.1",
     "@types/invariant": "^2.2.35",
     "graphql": "^16.8.0",
     "graphql-request": "^6.1.0",
     "invariant": "^2.2.4",
-    "react": "18.2.0",
-    "schemix": "npm:@thrivehealth/schemix@^1.14.1"
+    "react": "18.2.0"
   }
 }

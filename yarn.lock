@@ -1614,7 +1614,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@oclif/core@npm:^2.11.10, @oclif/core@npm:^2.11.11":
+"@oclif/core@npm:^2.11.11":
   version: 2.11.11
   resolution: "@oclif/core@npm:2.11.11"
   dependencies:
@@ -1652,12 +1652,48 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@oclif/plugin-help@npm:^5.2.18":
-  version: 5.2.18
-  resolution: "@oclif/plugin-help@npm:5.2.18"
+"@oclif/core@npm:^2.15.0":
+  version: 2.15.0
+  resolution: "@oclif/core@npm:2.15.0"
   dependencies:
-    "@oclif/core": "npm:^2.11.10"
-  checksum: 046fa603b3bbf340655bb138c388d6cb3d0b88190700b06fb32540ee2d437e50ba62d47b13b2713a8afd4f36d1dc750e25ac6c1737876b5524383fa25119efc9
+    "@types/cli-progress": "npm:^3.11.0"
+    ansi-escapes: "npm:^4.3.2"
+    ansi-styles: "npm:^4.3.0"
+    cardinal: "npm:^2.1.1"
+    chalk: "npm:^4.1.2"
+    clean-stack: "npm:^3.0.1"
+    cli-progress: "npm:^3.12.0"
+    debug: "npm:^4.3.4"
+    ejs: "npm:^3.1.8"
+    get-package-type: "npm:^0.1.0"
+    globby: "npm:^11.1.0"
+    hyperlinker: "npm:^1.0.0"
+    indent-string: "npm:^4.0.0"
+    is-wsl: "npm:^2.2.0"
+    js-yaml: "npm:^3.14.1"
+    natural-orderby: "npm:^2.0.3"
+    object-treeify: "npm:^1.1.33"
+    password-prompt: "npm:^1.1.2"
+    slice-ansi: "npm:^4.0.0"
+    string-width: "npm:^4.2.3"
+    strip-ansi: "npm:^6.0.1"
+    supports-color: "npm:^8.1.1"
+    supports-hyperlinks: "npm:^2.2.0"
+    ts-node: "npm:^10.9.1"
+    tslib: "npm:^2.5.0"
+    widest-line: "npm:^3.1.0"
+    wordwrap: "npm:^1.0.0"
+    wrap-ansi: "npm:^7.0.0"
+  checksum: 610ad7425ac811797ec289be9f2f4763f95abf407d2b7b78a8f2871a2954168ff5c4ec323f831a0df5b5938d3ef826ad3915629c9749f7f615e1d4455f13b100
+  languageName: node
+  linkType: hard
+
+"@oclif/plugin-help@npm:^5.2.19":
+  version: 5.2.19
+  resolution: "@oclif/plugin-help@npm:5.2.19"
+  dependencies:
+    "@oclif/core": "npm:^2.15.0"
+  checksum: 30854e16c97e42201c95bd193991a8b57ec95a1bfcbe14f764244fb152d38e3bfe275d0f1351c6aeecbca2d1cf9cc4202461960f957846bb721cfa91484be0f9
   languageName: node
   linkType: hard
 
@@ -1902,31 +1938,41 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@thcare/thfx@npm:^23.6.0":
-  version: 23.6.0
-  resolution: "@thcare/thfx@npm:23.6.0::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40thcare%2Fthfx%2F23.6.0%2Fceac546c674f95a947ddbfb394f468b063fbfdb0"
+"@thcare/thfx@npm:^24.3.1":
+  version: 24.3.1
+  resolution: "@thcare/thfx@npm:24.3.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40thcare%2Fthfx%2F24.3.1%2Feb02633834280979a5e52e57b90ef7a08039b03d"
   dependencies:
     "@oclif/core": "npm:^2.11.11"
-    "@oclif/plugin-help": "npm:^5.2.18"
+    "@oclif/plugin-help": "npm:^5.2.19"
+    "@thcare/thschemix": "npm:^24.3.1"
     "@types/json-logic-js": "npm:^2.0.2"
     axios: "npm:^1.4.0"
+    chalk: "npm:^5.3.0"
     execa: "npm:^7.2.0"
     glob: "npm:^10.3.4"
     invariant: "npm:^2.2.4"
+    json-logic-js: "npm:^2.0.2"
     pkg-dir: "npm:^7.0.0"
     react-intl: "npm:^6.4.4"
     reflect-metadata: "npm:^0.1.13"
-    schemix: "npm:@thrivehealth/schemix@^1.14.1"
     semver: "npm:^7.5.4"
     tar-stream: "npm:^3.1.6"
     type-fest: "npm:^4.3.1"
+    yup: "npm:^1.2.0"
   peerDependencies:
     graphql: ^16.8.0
     react: 18.2.0
     type-graphql: 2.0.0-beta.3
   bin:
     thfx: ./bin/run.js
-  checksum: 1dd239b7eccce3f42fb1a407aa389967aaac11a99f81b1f48e274fb5c9abd3d0907613e8cf4f1b94b4cd4de9161d91dd99bcdafa9b6b96e406e75fded9fe6f92
+  checksum: fb1a34fc8cb477c7f101014a2c00f78ca6fd5b4dcf1fb94577b62656ce43b2916b87b59d9001ff893df2260ccb7c3e123225a27f30a7e027e6154df193fff13c
+  languageName: node
+  linkType: hard
+
+"@thcare/thschemix@npm:^24.3.1":
+  version: 24.3.1
+  resolution: "@thcare/thschemix@npm:24.3.1::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40thcare%2Fthschemix%2F24.3.1%2Fb3f06c00fcf709cbbb1738893dea49097b38c3c7"
+  checksum: 7b0c3b644795f02b142565b114c57c648e410934f1a8c0331d4892e9f72f48ea5f945aef5f4e300e03da870df8607d6ac978efbdb44968aae3dc5c1792b3d4a1
   languageName: node
   linkType: hard
 
@@ -3118,6 +3164,13 @@ __metadata:
     ansi-styles: "npm:^4.1.0"
     supports-color: "npm:^7.1.0"
   checksum: cb3f3e594913d63b1814d7ca7c9bafbf895f75fbf93b92991980610dfd7b48500af4e3a5d4e3a8f337990a96b168d7eb84ee55efdce965e2ee8efc20f8c8f139
+  languageName: node
+  linkType: hard
+
+"chalk@npm:^5.3.0":
+  version: 5.3.0
+  resolution: "chalk@npm:5.3.0"
+  checksum: 6373caaab21bd64c405bfc4bd9672b145647fc9482657b5ea1d549b3b2765054e9d3d928870cdf764fb4aad67555f5061538ff247b8310f110c5c888d92397ea
   languageName: node
   linkType: hard
 
@@ -5677,6 +5730,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"json-logic-js@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "json-logic-js@npm:2.0.2"
+  checksum: 2a25d0b951b90bfbccf4f638fbf17cc733518d54c029d7e38e71544d1f4c53efc7c445e888a6c804374e177b384d77b59762cb02bcf6d85b102598a9d8443345
+  languageName: node
+  linkType: hard
+
 "json-parse-even-better-errors@npm:^2.3.0":
   version: 2.3.1
   resolution: "json-parse-even-better-errors@npm:2.3.1"
@@ -7329,6 +7389,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"property-expr@npm:^2.0.5":
+  version: 2.0.5
+  resolution: "property-expr@npm:2.0.5"
+  checksum: 4ebe82ce45aaf1527e96e2ab84d75d25217167ec3ff6378cf83a84fb4abc746e7c65768a79d275881602ae82f168f9a6dfaa7f5e331d0fcc83d692770bcce5f1
+  languageName: node
+  linkType: hard
+
 "proxy-from-env@npm:^1.1.0":
   version: 1.1.0
   resolution: "proxy-from-env@npm:1.1.0"
@@ -7808,13 +7875,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"schemix@npm:@thrivehealth/schemix@^1.14.1":
-  version: 1.14.1
-  resolution: "@thrivehealth/schemix@npm:1.14.1"
-  checksum: e4d93d873ed62403d2e02d9b49941387abac3c6be26d1f557618c61038994c678e4b31b652810a6df1fde6245b9e2573ec05982bef1dca2774927ab009259e30
-  languageName: node
-  linkType: hard
-
 "scuid@npm:^1.1.0":
   version: 1.1.0
   resolution: "scuid@npm:1.1.0"
@@ -8014,7 +8074,8 @@ __metadata:
     "@graphql-codegen/client-preset": "npm:^4.1.0"
     "@prisma/client": "npm:^4.16.2"
     "@thcare/eslint-config-thcare": "npm:^23.6.0"
-    "@thcare/thfx": "npm:^23.6.0"
+    "@thcare/thfx": "npm:^24.3.1"
+    "@thcare/thschemix": "npm:^24.3.1"
     "@types/graphql-fields": "npm:^1.3.5"
     "@types/invariant": "npm:^2.2.35"
     "@types/node": "npm:^18.17.1"
@@ -8029,7 +8090,6 @@ __metadata:
     prisma: "npm:^4.16.2"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
-    schemix: "npm:@thrivehealth/schemix@^1.14.1"
     ts-node: "npm:^10.9.1"
     type-graphql: "npm:2.0.0-beta.3"
     typegraphql-prisma: "npm:^0.26.0"
@@ -8414,6 +8474,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tiny-case@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "tiny-case@npm:1.0.3"
+  checksum: 3f7a30c39d5b0e1bc097b0b271bec14eb5b836093db034f35a0de26c14422380b50dc12bfd37498cf35b192f5df06f28a710712c87ead68872a9e37ad6f6049d
+  languageName: node
+  linkType: hard
+
 "title-case@npm:^3.0.3":
   version: 3.0.3
   resolution: "title-case@npm:3.0.3"
@@ -8454,6 +8521,13 @@ __metadata:
   dependencies:
     is-number: "npm:^7.0.0"
   checksum: 10dda13571e1f5ad37546827e9b6d4252d2e0bc176c24a101252153ef435d83696e2557fe128c4678e4e78f5f01e83711c703eef9814eb12dab028580d45980a
+  languageName: node
+  linkType: hard
+
+"toposort@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "toposort@npm:2.0.2"
+  checksum: 6f128353e4ed9739e49a28fb756b0a00f3752b29fc9b862ff781446598ee3b486cd229697feebc4eabd916eac5de219f3dae450c585bf13673f6b133a7226e06
   languageName: node
   linkType: hard
 
@@ -8627,6 +8701,13 @@ __metadata:
   version: 0.8.1
   resolution: "type-fest@npm:0.8.1"
   checksum: fd4a91bfb706aeeb0d326ebd2e9a8ea5263979e5dec8d16c3e469a5bd3a946e014a062ef76c02e3086d3d1c7209a56a20a4caafd0e9f9a5c2ab975084ea3d388
+  languageName: node
+  linkType: hard
+
+"type-fest@npm:^2.19.0":
+  version: 2.19.0
+  resolution: "type-fest@npm:2.19.0"
+  checksum: 7bf9e8fdf34f92c8bb364c0af14ca875fac7e0183f2985498b77be129dc1b3b1ad0a6b3281580f19e48c6105c037fb966ad9934520c69c6434d17fd0af4eed78
   languageName: node
   linkType: hard
 
@@ -9260,6 +9341,18 @@ __metadata:
   version: 1.0.0
   resolution: "yocto-queue@npm:1.0.0"
   checksum: 2cac84540f65c64ccc1683c267edce396b26b1e931aa429660aefac8fbe0188167b7aee815a3c22fa59a28a58d898d1a2b1825048f834d8d629f4c2a5d443801
+  languageName: node
+  linkType: hard
+
+"yup@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "yup@npm:1.2.0"
+  dependencies:
+    property-expr: "npm:^2.0.5"
+    tiny-case: "npm:^1.0.3"
+    toposort: "npm:^2.0.2"
+    type-fest: "npm:^2.19.0"
+  checksum: 34f61817c9a905f5effe51f492ab4d47311b0bc94ec3dd83ac57c64eaa0d8a4278e60e0e0b05acc941fbb15562bfcef07d361b6bbf2d34467906a00b0466d0cf
   languageName: node
   linkType: hard
 
