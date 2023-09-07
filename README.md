@@ -12,16 +12,6 @@ Click the button "Use this template" then click "Create a new repository"
 
 ---
 
-**IMPORTANT NOTE**
-
-For the demo, we ask that:
-
-1. Everyone put the repo in the `thcare` org (it won't work otherwise)
-2. Prefix the name in their repo like this `solution-<name>`. Replace `<name>` with your name, or whatever you'd like.
-3. Ensure sure the repo is _private_.
-
----
-
 ### Start a codespace
 
 The fastest way to get started is to spin up a codespace! Click the "Code" button in the top right of your repo, and select "Open with Codespaces". This will take a few minutes to spin up.
@@ -30,7 +20,18 @@ You'll get a new browser tab running VS Code with this readme open. See you on t
 
 ### Install dependencies
 
-Once your codespace is up and running, you'll need to install the dependencies. Open a terminal in VS Code (Terminal > New Terminal) and run:
+Once your codespace is up and running, you'll need to install the dependencies.
+
+First, you'll need to set an environmnet variable to get access to the `thcare` package repositories.  You can do this on the command line, or set it on your repository codespaces secrets configuration.  We'll leave that part up to you, but for brevity we will demo the command line here.  See [managing secrets for your codespaces](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces).  The variable is `THCARE_NPM_IDENT` and it should be one that was provided to you in your on-boarding process.
+
+Open a terminal in VS Code (Terminal > New Terminal) and run:
+
+
+```bash
+export THCARE_NPM_IDENT="ReplaceWithYourIdent"
+```
+
+And then run:
 
 ```bash
 yarn
@@ -105,30 +106,10 @@ TL;DR
 - Click Commit
 - Click Sync
 
-### Ready to deploy!
+## Setting up GitHub Workflows
 
-You will need to get some credentials and set them in your GitHub
-repository, then you will be able to use the Deploy solution action to
-see your solution live.
-
-```bash
-npx thfx init <name>
-```
-
-Replace `<name>` with the same name you used in your repository naming earlier (i.e. `solution-<name>`).
-
-> **NOTE:** This relies on some variables that are set in codespaces, so if you're not using a codespace, you'll need to set these manually. See the [thfx init command documentation](https://github.com/thcare/dev.th.care/blob/main/docs/cli/init.md) and [Documentation Wiki](https://github.com/thcare/docs/wiki) for details.
-
-Once this runs successfully, you should be able to go to your repo:
-`https://github.com/thcare/<FILL_IN_YOUR_SOLUTION_REPO>/actions/workflows/deploy-solution.yml`
-And click "Run workflow". You should then be able to follow along with the
-deployment by watching the logs, or simply wait for the run to succeed
-(or fail! These are early days for the framework, and your patience is
-valued)
-
-Once the deployment is complete, you should be able to visit your solution, live at:
-`https://patient.<YOUR_SOLUTION_NAME>.dev.thdev.care/`
+In order for the GitHub Workflow to run the validation steps, you will need to tell GitHub Actions your `THCARE_NPM_IDENT` secret as well.  See [Creating secrets for a repository](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions#creating-secrets-for-a-repository) for more information.
 
 ## Further Reading
 
-See our [Documentation Wiki](https://github.com/thcare/docs/wiki) for more information on how to use the th.care Framework.
+See our [Documentation](https://thfx.th.care) for more information on how to use the th.care Framework.

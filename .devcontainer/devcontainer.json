@@ -29,16 +29,6 @@
       ]
     }
   },
-  "codespaces": {
-    "repositories": {
-      "thcare/thfx": {
-        "permissions": {
-          "contents": "read",
-          "packages": "read"
-        }
-      }
-    }
-  },
   "containerEnv": {
     "GITHUB_TOKEN": "${localEnv:GITHUB_TOKEN}"
   }
