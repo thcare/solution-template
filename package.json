@@ -158,8 +158,8 @@
   },
   "dependencies": {
     "@azure/functions": "^3.5.1",
-    "@thcare/thfx": "^26.2.1",
-    "@thcare/thschemix": "^26.2.1",
+    "@thcare/thfx": "^26.2.6",
+    "@thcare/thschemix": "^26.2.6",
     "@types/invariant": "^2.2.35",
     "graphql": "^16.8.0",
     "graphql-request": "^6.1.0",

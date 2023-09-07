@@ -10,7 +10,7 @@ jobs:
 
       - name: Install dependencies
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          THCARE_NPM_IDENT: ${{ secrets.THCARE_NPM_IDENT }}
         run: yarn install --mode=skip-build
 
       - name: Build
