@@ -83,7 +83,7 @@
       ]
     },
     "build/compile": {
-      "command": "node dist/src/compile.js",
+      "command": "thfx solution:compile --solution-file ./dist/src/solution.js",
       "dependencies": [
         "build/tsc"
       ]
@@ -168,8 +168,8 @@
   },
   "dependencies": {
     "@azure/functions": "^3.5.1",
-    "@thcare/thfx": "^24.5.2",
-    "@thcare/thschemix": "^24.5.2",
+    "@thcare/thfx": "^25.5.1",
+    "@thcare/thschemix": "^25.5.1",
     "@types/invariant": "^2.2.35",
     "graphql": "^16.8.0",
     "graphql-request": "^6.1.0",
