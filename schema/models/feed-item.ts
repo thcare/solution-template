@@ -1,16 +1,10 @@
 import { createModel } from "@thcare/thschemix";
 import Patient from "./patient.js";
+import { models } from "@thcare/thfx/prisma";
 
 export default createModel("FeedItem", (model) =>
   model
-    .string("id", {
-      id: true,
-      default: { uuid: true },
-    })
-    .string("subject")
-    .string("body", { optional: true })
-    .dateTime("createdAt", { default: { now: true } })
-    .dateTime("dismissedAt", { optional: true })
+    .mixin(models.FeedItem)
     .string("patientId")
     .relation("patient", Patient, { fields: ["patientId"], references: ["id"] })
 );
