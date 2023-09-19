@@ -63,7 +63,8 @@ async function createPatientAndFeedItems(
         create: [
           {
             subject: "Welcome to the your Solution Demo",
-            body: "We're excited to have you as a patient!",
+            summary: "We're excited to have you as a patient!",
+            body: "Feed items can have more detailed content, including further calls to action.\n\nTo see more of what you can accomplish with a th.care solution, [click here](https://go.th.care/docs).",
           },
         ],
       },
