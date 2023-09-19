@@ -18,3 +18,12 @@ jobs:
 
       - name: Lint
         run: yarn lint -- --max-warnings=0
+
+      # This can happen if a prisma migration was generated but not checked in
+      - name: Check for modified files
+        run: |
+          if [[ -n $(git status --short) ]]; then
+            echo "These files were modified during build. Check them in as part of your PR."
+            git status --short
+            false
+          fi
