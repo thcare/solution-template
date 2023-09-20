@@ -1900,13 +1900,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@thcare/thfx@npm:^26.4.1":
-  version: 26.4.1
-  resolution: "@thcare/thfx@npm:26.4.1::__archiveUrl=https%3A%2F%2Fpkg.thdev.care%2F%40thcare%2Fthfx%2F-%2F1d54bf4d4b62f43a3141e6ed222e541f7e62701d"
+"@thcare/thfx@npm:^26.4.2":
+  version: 26.4.2
+  resolution: "@thcare/thfx@npm:26.4.2::__archiveUrl=https%3A%2F%2Fpkg.thdev.care%2F%40thcare%2Fthfx%2F-%2F9fac72a6b144eaf78e3d5de77027c0a5bec957a6"
   dependencies:
     "@oclif/core": "npm:^2.15.0"
     "@oclif/plugin-help": "npm:^5.2.19"
-    "@thcare/thschemix": "npm:^26.4.1"
+    "@thcare/thschemix": "npm:^26.4.2"
     "@types/json-logic-js": "npm:^2.0.2"
     axios: "npm:^1.5.0"
     chalk: "npm:^5.3.0"
@@ -1928,14 +1928,14 @@ __metadata:
     type-graphql: 2.0.0-beta.3
   bin:
     thfx: ./bin/run.js
-  checksum: 7683c566f6d56fc247cb79a4691b579651a0e506c1c820617a694b24349cb5df9ac128e4328945921ac873c41ddb86760f36cc0ec52957ec3d29a78d0440a174
+  checksum: ed33060dbf29e900f88e3971421d43f23dae57adcff3dbb67fa92c25fca2e3f974425301cc2fcc60991c5a55f6076df608d2bae7e2b5c8881b6a61b53e2e4d67
   languageName: node
   linkType: hard
 
-"@thcare/thschemix@npm:^26.4.1":
-  version: 26.4.1
-  resolution: "@thcare/thschemix@npm:26.4.1::__archiveUrl=https%3A%2F%2Fpkg.thdev.care%2F%40thcare%2Fthschemix%2F-%2F8d6eb22ddebb8f8925ae037e048d51e97cabc210"
-  checksum: b4cd078d7fcfa954e15639a07bf348a00927661c30810b94dca6323fb0f9742e045fadc21723bb8aad83e749873c0ea5da69aad0b782579a57f90c77f06e5cd9
+"@thcare/thschemix@npm:^26.4.2":
+  version: 26.4.2
+  resolution: "@thcare/thschemix@npm:26.4.2::__archiveUrl=https%3A%2F%2Fpkg.thdev.care%2F%40thcare%2Fthschemix%2F-%2Fa0042323a20bf3181642954ca2d1e45d26eba7c2"
+  checksum: 13e7b18bf1bf4f163b54667e82e76b12fedf360e9adf32815664668058f8906e50190a4d5eee12b919869d9920f83493fdff4a4339d6f6d23a359b762b7726d0
   languageName: node
   linkType: hard
 
@@ -7997,8 +7997,8 @@ __metadata:
     "@graphql-codegen/client-preset": "npm:^4.1.0"
     "@prisma/client": "npm:^4.16.2"
     "@thcare/eslint-config-thcare": "npm:^26.4.0"
-    "@thcare/thfx": "npm:^26.4.1"
-    "@thcare/thschemix": "npm:^26.4.1"
+    "@thcare/thfx": "npm:^26.4.2"
+    "@thcare/thschemix": "npm:^26.4.2"
     "@tsconfig/node18": "npm:^18.2.2"
     "@types/graphql-fields": "npm:^1.3.5"
     "@types/invariant": "npm:^2.2.35"
