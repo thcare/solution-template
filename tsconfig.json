@@ -4,7 +4,6 @@
     "jsx": "react",
     "rootDir": ".",
     "outDir": "./dist",
-    "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
