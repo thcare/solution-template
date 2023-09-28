@@ -1,6 +1,6 @@
 # th.care Framework Solution Template
 
-![th.care logo](thcare-logo.png)
+<img alt="" src="thcare-logo.png" width="500" />
 
 Welcome to YOUR th.care Framework powered Solution!
 
