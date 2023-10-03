@@ -22,13 +22,13 @@ You'll get a new browser tab running VS Code with this readme open. See you on t
 
 Once your codespace is up and running, you'll need to install the dependencies.
 
-First, you'll need to set an environmnet variable to get access to the `thcare` package repositories.  You can do this on the command line, or set it on your repository codespaces secrets configuration.  We'll leave that part up to you, but for brevity we will demo the command line here.  See [managing secrets for your codespaces](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces).  The variable is `THCARE_NPM_IDENT` and it should be one that was provided to you in your on-boarding process.
+First, you'll need to set an environmnet variable to get access to the `thcare` package repositories.  You can do this on the command line, or set it on your repository codespaces secrets configuration.  We'll leave that part up to you, but for brevity we will demo the command line here.  See [managing secrets for your codespaces](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces).  The variable is `THCARE_KEY` and it should be one that was provided to you in your on-boarding process.
 
 Open a terminal in VS Code (Terminal > New Terminal) and run:
 
 
 ```bash
-export THCARE_NPM_IDENT="ReplaceWithYourIdent"
+export THCARE_KEY="ReplaceWithYourIdent"
 ```
 
 And then run:
@@ -108,7 +108,7 @@ TL;DR
 
 ## Setting up GitHub Workflows
 
-In order for the GitHub Workflow to run the validation steps, you will need to tell GitHub Actions your `THCARE_NPM_IDENT` secret as well.  See [Creating secrets for a repository](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions#creating-secrets-for-a-repository) for more information.
+In order for the GitHub Workflow to run the validation steps, you will need to tell GitHub Actions your `THCARE_KEY` secret as well.  See [Creating secrets for a repository](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions#creating-secrets-for-a-repository) for more information.
 
 ## Further Reading
 
