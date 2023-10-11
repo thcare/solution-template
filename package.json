@@ -5,7 +5,21 @@
   "license": "ISC",
   "author": "Thrive Health",
   "type": "module",
-  "main": "dist/src/solution.js",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "types": "./dist/src/solution.d.ts",
+        "default": "./dist/src/solution.js"
+      }
+    },
+    "./components": {
+      "import": {
+        "types": "./dist/src/components/index.d.ts",
+        "default": "./dist/src/components/index.js"
+      }
+    }
+  },
   "files": [
     ".funcignore",
     "Fn*/**",
@@ -25,11 +39,10 @@
     "start": "wireit",
     "workbench": "yarn run dev --watch"
   },
-  "types": "dist/src/solution.d.ts",
   "dependencies": {
     "@azure/functions": "^3.5.1",
-    "@thcare/thfx": "^27.4.0",
-    "@thcare/thschemix": "^27.4.0",
+    "@thcare/thfx": "^27.12.3",
+    "@thcare/thschemix": "^27.12.3",
     "@types/invariant": "^2.2.35",
     "graphql": "^16.8.0",
     "graphql-request": "^6.1.0",
@@ -55,10 +68,10 @@
     "@graphql-codegen/cli": "^5.0.0",
     "@graphql-codegen/client-preset": "^4.1.0",
     "@prisma/client": "^4.16.2",
-    "@thcare/eslint-config-thcare": "^26.12.0",
+    "@thcare/eslint-config-thcare": "^27.12.3",
     "@tsconfig/node18": "^18.2.2",
     "@types/graphql-fields": "^1.3.5",
-    "@types/node": "^18.17.1",
+    "@types/node": "^18.18.4",
     "@types/react": "^18.2.17",
     "eslint": "^8.47.0",
     "graphql": "^16.8.0",
@@ -122,15 +135,15 @@
       ]
     },
     "build/compile": {
-      "command": "thfx solution:compile --solution-file ./dist/src/solution.js",
+      "command": "thfx solution:compile",
       "dependencies": [
         "build/tsc"
       ]
     },
     "lint": {
-      "command": "eslint src --ext .ts --ext .tsx --ignore-pattern 'src/generated/**'",
+      "command": "eslint src schema --ext .ts --ext .tsx --ignore-pattern 'src/generated/**'",
       "files": [
-        "src/**/*.{ts,tsx}",
+        "{src,schema}/**/*.{ts,tsx}",
         "tsconfig.json"
       ],
       "dependencies": [

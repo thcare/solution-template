@@ -30,7 +30,7 @@ const onIntakeFormSubmitted: AzureFunction = async function (
 export default onIntakeFormSubmitted;
 
 function getGraphQlEndpoint(): string {
-  const graphqlEndpoint = process.env["PUBLIC_GRAPHQL_ENDPOINT"];
+  const graphqlEndpoint = process.env.PUBLIC_GRAPHQL_ENDPOINT;
   if (!graphqlEndpoint) {
     throw new Error("Graphql endpoint unavailable");
   }
