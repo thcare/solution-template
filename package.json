@@ -166,7 +166,6 @@
     },
     "dev": {
       "command": "thfx solution:dev",
-      "service": true,
       "dependencies": [
         "build",
         "start"
