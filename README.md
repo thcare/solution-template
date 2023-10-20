@@ -22,7 +22,7 @@ You'll get a new browser tab running VS Code with this readme open. See you on t
 
 Once your codespace is up and running, you'll need to install the dependencies.
 
-First, you'll need to set an environmnet variable to get access to the `thcare` package repositories.  You can do this on the command line, or set it on your repository codespaces secrets configuration.  We'll leave that part up to you, but for brevity we will demo the command line here.  See [managing secrets for your codespaces](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces).  The variable is `THCARE_KEY` and it should be one that was provided to you in your on-boarding process.
+First, you'll need to set an environment variable to get access to the `thcare` package repositories.  You can do this on the command line, or set it on your repository codespaces secrets configuration.  We'll leave that part up to you, but for brevity we will demo the command line here.  See [managing secrets for your codespaces](https://docs.github.com/en/codespaces/managing-your-codespaces/managing-secrets-for-your-codespaces).  The variable is `THCARE_KEY` and it should be one that was provided to you in your on-boarding process.
 
 Open a terminal in VS Code (Terminal > New Terminal) and run:
 
