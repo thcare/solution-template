@@ -40,7 +40,8 @@ yarn
 ### A tour of the (important) files in this solution
 
 ```
-├── FnOnIntakeFormSubmitted     // This is necessary for how functions are deployed (currently)
+├── FnOnFormSubmitted           // This is necessary for how functions are deployed (currently)
+├── FnOnUserCreated
 ├── README.md                   // Hey, that's this file!
 ├── schema
 │   └── models                  // This is where you can add your solution-specific entities.
