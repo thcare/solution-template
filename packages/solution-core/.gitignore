@@ -36,3 +36,42 @@ yarn-error.log*
 
 # wireit
 .wireit/
+# Output of 'yarn pack'
+*.tgz
+
+# Typescript output
+dist/
+
+# thfx generated
+prisma/schema.prisma
+schema.gql
+prisma/generated-schema.prisma
+
+# Azure functions
+bin
+obj
+csx
+.vs
+edge
+Publish
+
+*.user
+*.suo
+*.cscfg
+*.Cache
+project.lock.json
+
+/packages
+/TestResults
+
+/tools/NuGet.exe
+/App_Data
+/secrets
+/data
+.secrets
+appsettings.json
+
+# wireit
+.wireit/
+
+src/generated/*
