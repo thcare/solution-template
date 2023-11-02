@@ -9,6 +9,7 @@ const path = require('path');
 const config = {
   resolver: {
     unstable_enableSymlinks: true,
+    unstable_enablePackageExports: true,
   },
   watchFolders: [path.resolve(__dirname, '../../node_modules')],
 };

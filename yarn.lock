@@ -10489,6 +10489,7 @@ __metadata:
     "@babel/runtime": "npm:^7.20.0"
     "@react-native/eslint-config": "npm:^0.72.2"
     "@react-native/metro-config": "npm:^0.72.11"
+    "@thcare/thfx": "npm:^29.0.4"
     "@tsconfig/react-native": "npm:^3.0.0"
     "@types/react": "npm:^18.0.24"
     "@types/react-test-renderer": "npm:^18.0.0"
@@ -10500,7 +10501,8 @@ __metadata:
     react: "npm:18.2.0"
     react-native: "npm:0.72.6"
     react-test-renderer: "npm:18.2.0"
-    typescript: "npm:4.8.4"
+    typescript: "npm:^5.2.2"
+    wireit: "npm:^0.10.0"
   languageName: unknown
   linkType: soft
 
@@ -13468,16 +13470,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:4.8.4":
-  version: 4.8.4
-  resolution: "typescript@npm:4.8.4"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: f985d8dd6ae815753d61cb81e434f3a4a5796ac52e423370fca6ad11bcd188df4013d82e3ba3b88c9746745b9341390ba68f862dc9d30bac6465e0699f2a795b
-  languageName: node
-  linkType: hard
-
 "typescript@npm:5, typescript@npm:^5.2.2":
   version: 5.2.2
   resolution: "typescript@npm:5.2.2"
@@ -13485,16 +13477,6 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: d65e50eb849bd21ff8677e5b9447f9c6e74777e346afd67754934264dcbf4bd59e7d2473f6062d9a015d66bd573311166357e3eb07fea0b52859cf9bb2b58555
-  languageName: node
-  linkType: hard
-
-"typescript@patch:typescript@npm%3A4.8.4#optional!builtin<compat/typescript>":
-  version: 4.8.4
-  resolution: "typescript@patch:typescript@npm%3A4.8.4#optional!builtin<compat/typescript>::version=4.8.4&hash=1a91c8"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 5d81fd8cf5152091a0c0b84ebc868de8433583072a340c4899e0fc7ad6a80314b880a1466868c9a6a1f640c3d1f2fe7f41f8c541b99d78c8b414263dfa27eba3
   languageName: node
   linkType: hard
 

@@ -1,3 +1,8 @@
 {
-  "extends": "@tsconfig/react-native/tsconfig.json"
+  "extends": "@tsconfig/react-native/tsconfig.json",
+  "compilerOptions": {
+    "module": "node16",
+    "moduleResolution": "node16"
+  },
+  "exclude": ["babel.config.cjs", "metro.config.cjs"]
 }
