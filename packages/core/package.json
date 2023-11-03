@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "solution-core",
+  "name": "@solution-template/core",
   "version": "1.0.0",
   "license": "ISC",
   "author": "Thrive Health",

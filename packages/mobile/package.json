@@ -1,5 +1,5 @@
 {
-  "name": "mobile",
+  "name": "@solution-template/mobile",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -10,7 +10,10 @@
     "test": "jest"
   },
   "dependencies": {
+    "@solution-template/core": "^1.0.0",
+    
     "@thcare/thfx": "^29.0.4",
+    "@thcare/thfx-generated": "file:../core/thfx-generated",
     "react": "18.2.0",
     "react-native": "0.72.6"
   },
