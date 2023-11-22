@@ -75,3 +75,6 @@ appsettings.json
 .wireit/
 
 src/generated/*
+
+# thfx 
+.thfx
