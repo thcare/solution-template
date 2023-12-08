@@ -1,6 +1,10 @@
 import request from "graphql-request";
 import { CREATE_FEED_ITEM, UPDATE_FEED_ITEMS } from "../graphql/queries.js";
 
+const headers = {
+  authorization: "i-am-a-solution-function",
+};
+
 export async function createFeedItem(
   userId: string,
   feedItem: { subject: string; summary?: string; body?: string }
@@ -9,14 +13,19 @@ export async function createFeedItem(
   if (!endpoint) {
     throw new Error("PUBLIC_GRAPHQL_ENDPOINT must be defined");
   }
-  return await request(endpoint, CREATE_FEED_ITEM, {
-    data: {
-      user: {
-        connect: { id: userId },
+  return await request(
+    endpoint,
+    CREATE_FEED_ITEM,
+    {
+      data: {
+        user: {
+          connect: { id: userId },
+        },
+        ...feedItem,
       },
-      ...feedItem,
     },
-  });
+    headers
+  );
 }
 
 export async function dismissFeedItems(userId: string) {
@@ -24,12 +33,17 @@ export async function dismissFeedItems(userId: string) {
   if (!endpoint) {
     throw new Error("PUBLIC_GRAPHQL_ENDPOINT must be defined");
   }
-  return await request(endpoint, UPDATE_FEED_ITEMS, {
-    data: {
-      dismissed_at: new Date().toISOString(),
+  return await request(
+    endpoint,
+    UPDATE_FEED_ITEMS,
+    {
+      data: {
+        dismissed_at: new Date().toISOString(),
+      },
+      where: {
+        user_id: { equals: userId },
+      },
     },
-    where: {
-      user_id: { equals: userId },
-    },
-  });
+    headers
+  );
 }
