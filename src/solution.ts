@@ -9,6 +9,13 @@ const solution: Solution = {
     patient,
   },
   hooks: [onFormSubmittedHook, onUserCreatedHook],
+  permissions: {
+    FeedItem: {
+      read: "all",
+      create: "solution-function",
+      update: "all",
+    },
+  },
 };
 
 export default solution;
