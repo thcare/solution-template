@@ -41,8 +41,8 @@
   },
   "dependencies": {
     "@azure/functions": "^3.5.1",
-    "@thcare/thfx": "^33.14.1",
-    "@thcare/thschemix": "33.14.1",
+    "@thcare/thfx": "^33.15.0",
+    "@thcare/thschemix": "^33.15.0",
     "@types/invariant": "^2.2.35",
     "graphql": "^16.8.0",
     "graphql-request": "^6.1.0",
@@ -68,12 +68,11 @@
     "@graphql-codegen/cli": "^5.0.0",
     "@graphql-codegen/client-preset": "^4.1.0",
     "@prisma/client": "^5.4.2",
-    "@thcare/eslint-config-thcare": "33.14.1",
+    "@thcare/eslint-config-thcare": "^33.15.0",
     "@tsconfig/node18": "^18.2.2",
     "@types/graphql-fields": "^1.3.8",
     "@types/node": "^18.18.4",
     "@types/react": "^18.2.17",
-    "azure-functions-core-tools": "^4.0.5441",
     "eslint": "^8.47.0",
     "graphql": "^16.8.0",
     "graphql-fields": "^2.0.3",
@@ -153,7 +152,7 @@
       ]
     },
     "start": {
-      "command": "func start",
+      "command": "thfx func start",
       "service": true,
       "files": [
         "local.settings.json"
