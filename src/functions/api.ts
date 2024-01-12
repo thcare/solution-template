@@ -1,9 +1,6 @@
 import request from "graphql-request";
 import { CREATE_FEED_ITEM, UPDATE_FEED_ITEMS } from "../graphql/queries.js";
-
-const headers = {
-  authorization: "i-am-a-solution-function",
-};
+import { getAuthorizationHeader } from "@thcare/thfx";
 
 export async function createFeedItem(
   userId: string,
@@ -24,7 +21,9 @@ export async function createFeedItem(
         ...feedItem,
       },
     },
-    headers
+    {
+      authorization: getAuthorizationHeader("solution-function"),
+    }
   );
 }
 
@@ -44,6 +43,8 @@ export async function dismissFeedItems(userId: string) {
         user_id: { equals: userId },
       },
     },
-    headers
+    {
+      authorization: getAuthorizationHeader("solution-function"),
+    }
   );
 }
